@@ -1,17 +1,17 @@
 package br.com.ada.copa;
 
-import java.util.Comparator;
-
 public class Selecao implements Comparable<Selecao> {
 
     private String nome;
     private Integer saldoGol;
     private Integer pontuacao;
+    private Integer cartoesAmarelos;
 
-    public Selecao(String nome, Integer saldoGol, Integer pontuacao) {
+    public Selecao(String nome, Integer saldoGol, Integer pontuacao, Integer cartoesAmarelos) {
         this.nome = nome;
         this.saldoGol = saldoGol;
         this.pontuacao = pontuacao;
+        this.cartoesAmarelos = cartoesAmarelos;
     }
 
     public String getNome() {
@@ -24,6 +24,10 @@ public class Selecao implements Comparable<Selecao> {
 
     public Integer getSaldoGol() {
         return saldoGol;
+    }
+
+    public Integer getCartoesAmarelos() {
+        return cartoesAmarelos;
     }
 
     @Override
