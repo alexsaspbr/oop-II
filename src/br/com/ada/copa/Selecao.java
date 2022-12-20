@@ -1,6 +1,8 @@
 package br.com.ada.copa;
 
-public class Selecao implements Comparable<Selecao> {
+public class Selecao
+//        implements Comparable<Selecao>
+{
 
     private String nome;
     private Integer saldoGol;
@@ -30,7 +32,7 @@ public class Selecao implements Comparable<Selecao> {
         return cartoesAmarelos;
     }
 
-    @Override
+    /*@Override
     public int compareTo(Selecao outraSelecao) {
         int p = outraSelecao.getPontuacao().compareTo(this.pontuacao);
 
@@ -38,10 +40,13 @@ public class Selecao implements Comparable<Selecao> {
         // 0 = iguais
         // 1+ = maior
         int sg = outraSelecao.getSaldoGol().compareTo(this.saldoGol);
+        int ca = this.saldoGol.compareTo(outraSelecao.getSaldoGol());
 
-        if(p == 0)
+        if(p == 0 && sg == 0)
+            return ca;
+        else if(p == 0)
             return sg;
         else
             return p;
-    }
+    }*/
 }

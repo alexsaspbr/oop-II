@@ -8,10 +8,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Selecao brasil = new Selecao("Brasil", 10, 9, 3);
-        Selecao argentina = new Selecao("Argentina", 11, 6, 2);
-        Selecao franca = new Selecao("Franca", 9, 9, 4);
-        Selecao espanha = new Selecao("Espanha", 12, 3, 5);
+        Selecao brasil = new Selecao("Brasil", 10, 9, 1);
+        Selecao argentina = new Selecao("Argentina", 10, 9, 5);
+        Selecao franca = new Selecao("Franca", 10, 9, 4);
+        Selecao espanha = new Selecao("Espanha", 10, 9, 3);
 
         List<Selecao> ranking = new ArrayList<>();
 
@@ -25,11 +25,14 @@ public class Main {
             System.out.println(selecao.getNome());
         });
 
-        Comparator<Selecao> comparatorSaldoGol = Comparator.comparing(Selecao::getSaldoGol).reversed();
+        Comparator<Selecao> comparatorSaldoGol = Comparator
+                .comparing(Selecao::getPontuacao)
+                .thenComparing(Selecao::getSaldoGol)
+                .reversed()
+                .thenComparing(Selecao::getCartoesAmarelos);
 
         Collections.sort(ranking, comparatorSaldoGol);
         System.out.println("\nLista com ordenação");
-
         ranking.forEach(selecao -> System.out.println(selecao.getNome()));
 
     }
