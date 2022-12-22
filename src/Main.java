@@ -1,4 +1,8 @@
 import br.com.ada.copa.Selecao;
+import pessoa.NovaPessoaFisica;
+import pessoa.Pessoa;
+import pessoa.PessoaFisica;
+import pessoa.PessoaJuridica;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,10 +12,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Selecao brasil = new Selecao("Brasil", 10, 9, 1);
-        Selecao argentina = new Selecao("Argentina", 10, 9, 5);
-        Selecao franca = new Selecao("Franca", 10, 9, 4);
-        Selecao espanha = new Selecao("Espanha", 10, 9, 3);
+        /*Selecao brasil = new Selecao("Brasil", 0, 0, 1);
+        Selecao argentina = new Selecao("Argentina", 0, 0, 5);
+        Selecao franca = new Selecao("Franca", 0, 0, 4);
+        Selecao espanha = new Selecao("Espanha", 0, 0, 3);
 
         List<Selecao> ranking = new ArrayList<>();
 
@@ -25,15 +29,34 @@ public class Main {
             System.out.println(selecao.getNome());
         });
 
-        Comparator<Selecao> comparatorSaldoGol = Comparator
+        Comparator<Selecao> comparador = Comparator
                 .comparing(Selecao::getPontuacao)
                 .thenComparing(Selecao::getSaldoGol)
                 .reversed()
-                .thenComparing(Selecao::getCartoesAmarelos);
+                .thenComparing(Selecao::getCartoesAmarelos)
+                ;
+        ;
 
-        Collections.sort(ranking, comparatorSaldoGol);
+        Collections.sort(ranking, comparador);
+        //Collections.sort(ranking);
         System.out.println("\nLista com ordenação");
         ranking.forEach(selecao -> System.out.println(selecao.getNome()));
+*/
+
+        PessoaFisica pessoaFisica = new PessoaFisica();
+        PessoaJuridica pessoaJuridica = new PessoaJuridica();
+        NovaPessoaFisica np = new NovaPessoaFisica();
+
+        emitirDocumentoDe(pessoaFisica);
+        emitirDocumentoDe(pessoaJuridica);
+        emitirDocumentoDe(np);
+
 
     }
+
+    public static void emitirDocumentoDe(Pessoa pessoa) {
+        pessoa.first();
+        pessoa.second();
+    }
+
 }
