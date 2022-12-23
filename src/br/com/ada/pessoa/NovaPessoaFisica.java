@@ -1,4 +1,4 @@
-package pessoa;
+package br.com.ada.pessoa;
 
 public class NovaPessoaFisica extends PessoaFisica {
 

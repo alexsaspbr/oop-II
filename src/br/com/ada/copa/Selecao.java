@@ -1,9 +1,5 @@
 package br.com.ada.copa;
 
-import java.io.Serializable;
-import java.util.Comparator;
-import java.util.List;
-
 public class Selecao
        // implements Comparable<Selecao>
 {
