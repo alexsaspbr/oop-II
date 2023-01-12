@@ -6,6 +6,6 @@ import java.io.Serializable;
 
 
 
-public interface Imprimivel extends Serializable, Runnable {
+public interface Imprimivel {
 
 }

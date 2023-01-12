@@ -1,27 +1,15 @@
 package br.com.ada.pessoa;
 
+import br.com.ada.contato.Telefone;
+import br.com.ada.endereco.Endereco;
+
+import java.util.List;
+
 public class Pessoa {
 
     private String nome;
+    private Telefone telefone;
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void first(){
-        emitirDoc();
-    }
-
-    public void second(){
-        System.out.println("Imprimir documento...");
-    }
-
-    public void emitirDoc(){
-        System.out.println("Classe pessoa");
-    };
+    private List<Endereco> enderecos;
 
 }

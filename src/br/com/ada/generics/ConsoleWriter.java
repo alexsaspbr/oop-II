@@ -1,8 +1,6 @@
 package br.com.ada.generics;
 
-import br.com.ada.pessoa.NovaPessoaFisica;
 import br.com.ada.pessoa.Pessoa;
-import br.com.ada.pessoa.PessoaFisica;
 import br.com.ada.pessoa.PessoaJuridica;
 
 import java.util.HashMap;
@@ -64,8 +62,8 @@ public class ConsoleWriter<T, V> {
     }
 
     //SUPER
-    public void listSuper(List<? super NovaPessoaFisica> list){
+/*    public void listSuper(List<? super NovaPessoaFisica> list){
         list.forEach(System.out::println);
-    }
+    }*/
 
 }

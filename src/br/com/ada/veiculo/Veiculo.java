@@ -1,12 +1,25 @@
 package br.com.ada.veiculo;
 
+import java.math.BigDecimal;
+
 public abstract class Veiculo {
+
+    public Veiculo() {
+        this.valorDiaria = getValorDiaria();
+    }
 
     protected String fabricante;
 
-    public abstract void ligar();
-    public abstract void desligar();
-    public abstract void acelerar();
-    public abstract void desacelerar();
+    protected String placa;
+
+    protected String modelo;
+
+    protected BigDecimal valorDiaria;
+
+    protected Boolean alugado;
+
+
+    public abstract BigDecimal getValorDiaria();
+
 
 }

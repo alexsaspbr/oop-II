@@ -1,9 +1,25 @@
 package br.com.ada.impressora;
 
-public class Impressora implements Imprimivel {
+import br.com.ada.veiculo.Veiculo;
 
-    @Override
-    public void run() {
+public class Impressora<T extends Veiculo> {
 
+    private T t;
+
+    public Impressora(T t) {
+        this.t = t;
     }
+
+    public void imprimir() {
+       // System.out.printf("Fabricante %s", this.t.getFabricante());
+    }
+
+    public String imprimirPDF() {
+        // System.out.printf("Fabricante %s", this.t.getFabricante());
+    }
+
+    public T getT() {
+        return t;
+    }
+
 }

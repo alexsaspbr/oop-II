@@ -1,28 +1,17 @@
 package br.com.ada.veiculo;
 
-public class Carro extends Veiculo implements Automotivo {
-    @Override
-    public void ligar() {
+import java.math.BigDecimal;
 
+public class Carro extends Veiculo {
+
+    private String parametroCarro;
+
+    public Carro() {
+        super();
     }
 
     @Override
-    public void desligar() {
-
-    }
-
-    @Override
-    public void trocarMarcha() {
-
-    }
-
-    @Override
-    public void acelerar() {
-
-    }
-
-    @Override
-    public void desacelerar() {
-
+    public BigDecimal getValorDiaria() {
+        return new BigDecimal(150.0);
     }
 }
