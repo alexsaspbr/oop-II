@@ -16,6 +16,7 @@ public class Impressora<T extends Veiculo> {
 
     public String imprimirPDF() {
         // System.out.printf("Fabricante %s", this.t.getFabricante());
+        return "";
     }
 
     public T getT() {

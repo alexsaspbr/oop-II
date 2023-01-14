@@ -1,4 +1,4 @@
-package br.com.ada;
+package br.com.ada.meiosenvio;
 
 public interface MeioEnvio {
 

@@ -1,4 +1,6 @@
-import br.com.ada.MeioEnvio;
+package br.com.ada.meiosenvio;
+
+import br.com.ada.meiosenvio.MeioEnvio;
 import br.com.ada.impressora.Impressora;
 
 public class EnvioDocumento {
